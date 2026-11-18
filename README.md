@@ -29,6 +29,8 @@ npm test
 npm run typecheck
 ```
 
+接口集成测试使用隔离的本地数据库。教师测试账号使用 `teacher@example.test`，启动本地预览时为它配置临时口令，运行 `npm run test:integration` 时通过 `TEST_ADMIN_PASSWORD` 传入相同的口令。本次在 Windows 的 Wrangler 预览中分段验证了业务接口。连续请求资料下载时出现过超时，单独下载成功。超大定长请求按预期返回 413，超大分块请求返回 503，仍需在部署环境复核。
+
 ## 登录与诊断
 
 学生使用邮箱和自己选择的学习口令登录。请保留原口令和部署的签名密钥，以便再次访问同一份学习档案。本地教师可复制 `.dev.vars.example` 为 `.dev.vars`，填写以下需要的值并重启。
