@@ -1,0 +1,40 @@
+.solid-lab { --line: #c9d9d2; --ink: #234338; --paper: #fafcf8; color: var(--ink); background: var(--paper); border: 1px solid var(--line); border-radius: 15px; overflow: hidden; text-align: left; }
+.solid-lab__head, .solid-lab__controls { padding: 20px clamp(14px,3vw,28px); }
+.solid-lab__head h3 { margin: 0; font-size: clamp(19px,2vw,25px); color: #19382c; }
+.solid-lab__head p, .solid-lab__controls p { font-size: 14px; line-height: 1.85; margin: 8px 0 0; color: #476257; }
+.solid-lab__diagrams { display: grid; grid-template-columns: 1.6fr 1fr; background-color: #f0f5f0; background-image: linear-gradient(#cbd7ce55 1px,transparent 1px),linear-gradient(90deg,#cbd7ce55 1px,transparent 1px); background-size: 24px 24px; border-block: 1px solid var(--line); }
+.solid-lab__orbit, .solid-lab__true { display:flex; flex-direction:column; min-width:0; }
+.solid-lab__true { border-left: 1px solid var(--line); }
+.solid-lab__caption { display: flex; padding: 10px 14px; justify-content: space-between; align-items: baseline; gap: 6px; flex-wrap: wrap; background: #f6f9f2b8; }
+.solid-lab__caption strong { font-size:13px; }
+.solid-lab__caption span, .solid-lab__shape { font-size:12px; color:#4b6559; }
+.solid-lab__shape { display:block; text-align:center; margin-top:auto; padding:5px 8px 12px; }
+.solid-lab__diagrams svg { display:block; width:100%; min-height:0; max-height:340px; flex:1; }
+.solid-lab__orbit svg { cursor:grab; touch-action:none; }
+.solid-lab__orbit svg:active { cursor:grabbing; }
+.solid-lab :focus-visible { outline:2px solid #247d62; outline-offset:-2px; }
+.solid-lab__edge { stroke:#52685d; fill:none; stroke-width:1.35; stroke-linejoin:round; }
+.solid-lab__section { fill:#51a980; fill-opacity:.44; stroke:#177455; stroke-width:2; stroke-linejoin:round; }
+.solid-lab__water { fill:#409bbb; fill-opacity:.59; stroke:#1d758e; stroke-width:2; }
+.solid-lab__point { fill:#166548; stroke:#fff; stroke-width:1.3; }
+.solid-lab__cutline { fill:none; stroke:#177455; stroke-width:3; }
+.solid-lab__buttons { display:flex; flex-wrap:wrap; gap:6px; margin-bottom:16px; }
+.solid-lab__buttons button { cursor:pointer; padding:7px 12px; font-size:13px; color:var(--ink); background:white; border:1px solid var(--line); border-radius:8px; }
+.solid-lab__buttons button:hover { background:#e8f2e8; }
+.solid-lab__cut-actions { margin-block:12px 0; }
+.solid-lab__cut-actions button:disabled { opacity:.45; cursor:default; }
+.solid-lab__buttons button[aria-pressed=true] { background:#235c48; border-color:#235c48; color:white; }
+.solid-lab__ranges { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+.solid-lab__range { display:block; min-width:0; }
+.solid-lab__range > span { display:flex; justify-content:space-between; gap:7px; font-size:13px; align-items:baseline; }
+.solid-lab__range output { font:600 14px ui-monospace,monospace; }
+.solid-lab__range input[type=range] { width:100%; display:block; cursor:pointer; height:26px; padding:0; margin:2px 0; accent-color:#257456; }
+.solid-lab__controls details { margin-top:16px; padding-top:12px; border-top:1px solid var(--line); }
+.solid-lab__controls summary { cursor:pointer; font-size:14px; font-weight:600; }
+@media (max-width:560px) {
+ .solid-lab__diagrams { grid-template-columns: 1.25fr 1fr; }
+ .solid-lab__caption { padding:8px; }
+ .solid-lab__caption span { display:none; }
+ .solid-lab__ranges { grid-template-columns:1fr; gap:5px; }
+ .solid-lab__buttons button { padding:6px 9px; }
+}

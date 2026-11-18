@@ -1,0 +1,31 @@
+.drawing-lab { color:#243e36; background:#fcfdf9; border:1px solid #c6d6cd; border-radius:14px; overflow:hidden; }
+.drawing-lab__head,.drawing-lab__options,.drawing-lab__tools { padding:16px clamp(14px,3vw,26px); }
+.drawing-lab__head h3,.drawing-lab__instruction h4 { margin:0; font-size:clamp(18px,2.4vw,24px); }
+.drawing-lab__head p,.drawing-lab__instruction p,.drawing-lab__projection { margin:8px 0 0; font-size:14px; line-height:1.8; color:#415e51; }
+.drawing-lab__options,.drawing-lab__tools,.drawing-lab__options >div { display:flex; flex-wrap:wrap; align-items:center; gap:6px; }
+.drawing-lab__options { justify-content:space-between; padding-top:0; }
+.drawing-lab button { padding:7px 12px; color:#254737; background:#fff; border:1px solid #c8d7cd; border-radius:7px; font:inherit; font-size:13px; cursor:pointer; }
+.drawing-lab button:not(:disabled):hover { background:#eaf1e9; }
+.drawing-lab button[aria-pressed=true],.drawing-lab button[aria-pressed=true]:hover { background:#24573f; color:white; border-color:#24573f; }
+.drawing-lab button:disabled { opacity:.45; cursor:default; }
+.drawing-lab__body { display:grid; grid-template-columns:minmax(0,1.6fr) minmax(0,1fr); border-block:1px solid #ccd9ce; }
+.drawing-lab__paper { background-color:#f5f7ef; background-image:linear-gradient(#cbd7c84d 1px, transparent 1px), linear-gradient(90deg,#cbd7c84d 1px,transparent 1px); background-size:20px 20px; min-width:0; }
+.drawing-lab__paper>svg { display:block; width:100%; height:auto; max-height:380px; user-select:none; }
+.drawing-lab__paper .drawing-lab__tracing { touch-action:none; cursor:crosshair; }
+.drawing-lab__legend { display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin:2px 8px 12px; font-size:12px; color:#48624f; }
+.drawing-lab__legend>span { display:inline-flex; align-items:center; gap:4px; }
+.drawing-lab__legend i { display:inline-block; background:#b84b3e; width:8px; height:8px; border-radius:50%; }
+.drawing-lab__legend>span:nth-child(2) i { border:1px solid #b84b3e; background:white; }
+.drawing-lab__legend b { width:14px; border-bottom:2px dashed #304037; }
+.drawing-lab__instruction { border-left:1px solid #cad9d0; padding:clamp(14px,3vw,28px); align-content:center; }
+.drawing-lab__instruction small { display:block; margin-bottom:8px; font-size:12px; color:#54735f; }
+.drawing-lab__instruction .drawing-lab__line-tip { padding-top:10px; border-top:1px solid #dbe3da; }
+.drawing-lab__tools label { display:inline-flex; align-items:center; gap:4px; margin-left:auto; color:#496850; font-size:13px; }
+.drawing-lab__tools input { accent-color:#357455; }
+.drawing-lab .drawing-lab__projection { margin:0; padding:0 clamp(14px,3vw,26px) 18px; }
+.drawing-lab :focus-visible { outline:2px solid #2d7556; outline-offset:2px; }
+@media(max-width:630px) {
+ .drawing-lab__body { grid-template-columns:1fr; }
+ .drawing-lab__instruction { border-left:0; border-top:1px solid #cad9d0; }
+ .drawing-lab__options { gap:12px; }
+}

@@ -1,0 +1,38 @@
+.lab{min-width:0;color:#223d35;background:#fbfcf9;border:1px solid #d3dfd5;border-radius:12px;padding:clamp(.85rem,2vw,1.5rem);line-height:1.65;font-size:.94rem}
+.lab h2,.lab h3{color:#204738;line-height:1.35;margin:0 0 .55em}
+.lab h2{font-size:1.45rem}.lab h3{font-size:1.05rem}.lab p{margin:.55rem 0 .9rem}
+.lab button,.lab select{font:inherit;color:#23473d;border:1px solid #bdcfc4;border-radius:6px;background:#fff;padding:.35rem .65rem;cursor:pointer}
+.lab button[aria-pressed=true]{background:#e0efe6;border-color:#36795b;box-shadow:inset 0 0 0 1px #36795b}.lab button:disabled{opacity:.55;cursor:default}
+.lab :focus-visible{outline:3px solid #835284;outline-offset:2px}
+.actions,.tiles,.family{display:flex;flex-wrap:wrap;gap:.4rem;align-items:center}
+.params{display:flex;gap:1.1rem;flex-wrap:wrap;border-block:1px solid #d7e3d9;margin:.8rem 0;padding:.65rem 0}
+.param{display:flex;flex-direction:column;min-width:8rem;flex:1;gap:.15em}
+.lab .param input[type=range],.lab .inspect input[type=range]{width:100%;padding:0;border:0;box-shadow:none;accent-color:#22664b;height:25px;background:transparent;}
+.workspace{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:1rem;align-items:start}
+.workspace:has(>.main:only-child){grid-template-columns:minmax(0,1fr)}
+.main,.proof{min-width:0}
+.proof{padding:.9rem;background:#f0f5ef;border-left:3px solid #a9c5ae;border-radius:5px}
+.proof h3:not(:first-child){margin-top:1.05rem}
+.lab .tile{display:inline-flex;justify-content:center;align-items:center;min-width:2.2rem;min-height:2.4rem;border:1px solid #a2b7c6;border-radius:6px;background:#e9f1f6;color:#2e4b61;padding:.18rem .35rem;position:relative;user-select:none}
+.lab .tile.special{background:#e5f0e4;border-color:#91b69a;color:#285b38}.lab .tile.invalid{background:#f9e5d9;border-color:#ba6a47;color:#913c22}
+.lab .tile.selected{outline:2px solid #795785;outline-offset:-2px}.lab .tile[aria-pressed=true]{box-shadow:none}
+.slots{display:flex;gap:.35rem;flex-wrap:wrap;padding:.8rem 0}.slots>div{display:grid;gap:.15rem;text-align:center;min-width:2.4rem;color:#607065;font-size:.85em}
+.status{margin:.8rem 0;padding:.42rem .7rem;border-left:3px solid #719a83;background:#eef4ed}
+.inspect{border-top:1px solid #d5e0d5;padding-top:.55rem;margin-top:.8rem}.inspect summary,.tree summary{cursor:pointer;font-weight:650}
+.proof :global(.math-display){font-size:1em}.actions label{display:inline-flex;align-items:center;gap:.35em}
+.lab .actions input[type=checkbox]{width:1rem;height:1rem;accent-color:#266d4d;margin:0;padding:0}
+.linearLane{position:relative;height:3.2rem;min-width:0}.linearLane .tile{position:absolute;transition:left .32s ease;min-width:0;margin:.35rem 0}
+.tableBoard{position:relative;max-width:285px;width:100%;aspect-ratio:1;margin:.3rem auto}
+.tableTop{position:absolute;inset:22%;border:1px solid #8da696;border-radius:50%;background:#dce9db;display:grid;place-content:center;color:#4d6558}
+.tableBoard .tile{transform:translate(-50%,-50%);transition:left .36s ease,top .36s ease}
+.family .good{border-color:#58956f;background:#e8f3e9}.family .bad{border-color:#ba8a69;background:#fbf0e5}.family button{font-size:.84rem}
+.routes{width:100%;max-width:540px;display:block;background:#f2f6f4;margin:0 auto;border-radius:6px}
+.routes [role=button]{cursor:pointer}.routes [role=button]:focus-visible{outline:2px solid #87589b}
+.routeLegend{display:grid;gap:.2rem;margin:.45rem 0 .75rem}.routeLegend>div{display:flex;align-items:center;flex-wrap:wrap;gap:.25rem}.routeLegend>div>span:first-child{font-size:.85em;color:#51665a}.routeLegend button{display:inline-flex;align-items:center;gap:.25rem;padding:.08rem .35rem}.routeLegend button>svg{width:26px;height:8px}
+.mathLabel{height:22px;display:grid;place-items:center;font-size:12px;line-height:1;color:#233e38}.mathLabel :global(.math-inline){padding:0;line-height:1;overflow:visible}
+.tree ul{list-style:none;padding:0;margin:.45rem 0}.tree li{display:flex;gap:.65em;align-items:center;margin:.4em 0}.tree li>div{display:flex;flex-wrap:wrap;gap:.28em;border-left:2px solid #9eb7a8;padding-left:.6em}
+.tree button{padding:.12em .45em}
+@media(max-width:760px){.workspace{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:440px){.lab{padding:.65rem}.lab .tile{min-width:1.85rem}.linearLane .tile{min-width:0}.params{gap:.4rem}.lab .tile{font-size:.91rem}.inspect .actions{font-size:.87rem}}
+@media(prefers-reduced-motion:reduce){.tableBoard .tile,.linearLane .tile{transition:none}}
+

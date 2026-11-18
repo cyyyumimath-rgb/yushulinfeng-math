@@ -1,0 +1,6 @@
+# Optional. npm start generates a private local signing key when this is blank.
+STANDALONE_AUTH_SECRET=
+SITE_ADMIN_EMAIL=
+SITE_ADMIN_PASSWORD=
+DIAGNOSIS_API_KEY=
+DIAGNOSIS_MODEL=

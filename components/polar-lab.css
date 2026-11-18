@@ -1,0 +1,54 @@
+.polar-lab { max-width:1000px; width:100%; min-width:0; overflow:hidden; border:1px solid #c0d1c6; border-radius:16px; background:#fff; color:#264337; }
+.polar-lab header,.polar-controls { padding:clamp(14px,2.6vw,24px); }
+.polar-lab header { background:#fbfcf8; }
+.polar-lab h2,.polar-lab h3 { margin:0 0 12px; font-size:clamp(18px,2.5vw,23px); line-height:1.45; }
+.polar-lab h3 { font-size:17px; }
+.polar-tabs,.polar-actions { display:flex; align-items:center; flex-wrap:wrap; gap:8px; }
+.polar-lab button { font:inherit; font-size:14px; padding:7px 12px; border:1px solid #c2d4ca; background:#f6f9f5; color:#234c3a; border-radius:7px; cursor:pointer; }
+.polar-lab button:hover { background:#e9f1eb; }
+.polar-lab button[aria-pressed=true] { background:#224e3c; color:white; }
+.polar-lab :where(button,input):focus-visible { outline:2px solid #19785a; outline-offset:2px; }
+.polar-study { display:grid; grid-template-columns:minmax(0,1.15fr) minmax(0,1fr); align-items:start; border-block:1px solid #d1ded4; }
+.polar-study figure { margin:0; min-width:0; }
+.polar-plot { width:100%; height:auto; display:block; touch-action:none; cursor:crosshair; }
+.polar-study figcaption { display:flex; flex-wrap:wrap; gap:7px 14px; font-size:13px; line-height:1.5; padding:12px 14px; }
+.polar-study figcaption>span { display:inline-flex; align-items:center; gap:4px; }
+.polar-study figcaption i { width:15px; display:inline-block; }
+.polar-study figcaption .polar-dot,.polar-study figcaption .polar-contact { width:9px; height:9px; border-radius:50%; }
+.polar-dot { background:#a6472a; }
+.polar-contact { background:#fff; border:2px solid #0a775e; }
+.polar-curve { border-top:3px solid #263e50; }
+.polar-line { border-top:2px solid #087c63; }
+.polar-tangent { border-top:2px dashed #8b6a3e; }
+.polar-asymptote { border-top:2px dotted #8f9f94; }
+.polar-steps { min-width:0; padding:16px 20px; }
+.polar-steps ol { list-style:decimal; padding-inline-start:22px; margin:0; }
+.polar-steps li { margin:0 0 10px; font-size:15px; line-height:1.65; }
+.polar-steps p,.polar-controls p { margin:3px 0 0; font-size:14px; line-height:1.7; color:#516b5f; }
+.polar-lab .math-display { max-width:100%; overflow-x:auto; overflow-y:hidden; }
+.polar-lab .katex-display { margin:.4em 0; }
+.polar-sliders { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px; }
+.polar-control { display:block; font-size:14px; }
+.polar-control>span { display:flex; justify-content:space-between; align-items:baseline; }
+.polar-control input { display:block; height:26px; padding:0; width:100%; accent-color:#20755d; }
+.polar-actions { margin:10px 0; }
+.polar-actions label { display:inline-flex; align-items:center; gap:4px; font-size:14px; }
+.polar-actions input { width:auto; accent-color:#20755d; }
+.polar-lab button:disabled {opacity:.5;cursor:default}
+.polar-controls .polar-tabs+.polar-tabs,.polar-controls .polar-sliders {margin-top:.8rem}
+.polar-controls a {color:#156854;text-decoration:underline;text-underline-offset:.17em}
+.polar-marker {width:100%;height:100%;display:grid;place-items:center;color:#253f37;line-height:1}
+.polar-marker .math-formula.math-inline {overflow:visible;padding:0;line-height:1}
+.polar-plot>path,.polar-plot>g path {vector-effect:non-scaling-stroke}
+.cd-figure>svg {display:block;width:100%;height:auto;touch-action:none}
+.cd-read {padding:0 .9rem .6rem;color:#316451}
+.cd-lab .cd-green,.cd-lab .cd-orange,.cd-lab .cd-blue {border-bottom:2px solid #13715f;color:#265b4e}
+.cd-lab .cd-orange {border-color:#9c643c;color:#825131}
+.cd-lab .cd-blue {border-color:#5775a0;color:#435d7c}
+.cd-lab .polar-controls details {margin-top:.7rem;padding-top:.6rem;border-top:1px solid #d1ded4;font-size:.87rem;line-height:1.8}
+.cd-lab .polar-controls summary {cursor:pointer}
+@media(max-width:650px){
+ .polar-study,.polar-sliders { grid-template-columns:minmax(0,1fr); }
+ .polar-sliders { gap:5px; }
+ .polar-steps { padding:14px; }
+}

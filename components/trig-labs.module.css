@@ -1,0 +1,76 @@
+.lab {
+  width: 100%; min-width: 0; margin: 1rem 0; padding: clamp(.85rem, 2.5vw, 1.6rem);
+  background: #fcfdfb; color: #243d36; border: 1px solid #cbd9d0; border-radius: 12px;
+  line-height: 1.65; text-align: start;
+}
+.selector, .actions, .legend { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; }
+.lab button, .lab select {
+  border: 1px solid #aabfb3; background: white; color: #254b40; border-radius: 6px;
+  padding: .45rem .8rem; font: inherit; font-size: .92rem; cursor: pointer;
+}
+.lab button[aria-pressed="true"], .actions button:first-child {
+  border-color: #276653; background: #276653; color: white;
+}
+.lab :focus-visible { outline: 3px solid #a36237; outline-offset: 3px; }
+.explain, .lesson p { margin: .7rem 0; color: #456054; }
+.periodicLayout { display: grid; grid-template-columns: minmax(0,1.18fr) minmax(0,1fr); align-items: start; gap: 1rem; }
+.views { display: grid; gap: .65rem; min-width: 0; }
+.views figure, .circle {
+  border: 1px solid #d4e0d8; border-radius: 8px; background: #f4f8f4;
+}
+.views figure { margin: 0; padding: .65rem; display: flex; flex-direction: column; justify-content: space-between; }
+.views figcaption, .circleSide label { color: #284e41; font-size: .95rem; font-weight: 650; }
+.lab figure>svg { display: block; width: 100%; height: auto; }
+.lab figure>svg>text { font-family: inherit; font-size: 12px; fill: #345247; }
+.lab .diagramMath { display: flex; align-items:center; justify-content:center; height:20px; font-size:13px; color:#2e493d; line-height:1; }
+.lab .diagramMath :global(.math-formula.math-inline) { display:inline-block; overflow:visible; padding:0; line-height:1; }
+.lab .diagramMath :global(.katex) { font-size:1em; }
+.measure { text-align: center; color: #547064; font-size: .85rem; }
+.measure b { margin-left: .4em; color: #744b2b; font-variant-numeric: tabular-nums; }
+.controls { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: .75rem 1.4rem; margin: 1rem 0; }
+.range { display: block; min-width: 0; }
+.range>span { display: flex; align-items: baseline; justify-content: space-between; gap: .5rem; color: #274b3e; font-size: .88rem; font-weight: 650; }
+.range output { color: #286858; font-weight: 500; font-variant-numeric: tabular-nums; }
+.lab .range input[type=range] {
+  display: block; width: 100%; min-width: 0; height: 28px; margin: 0; padding: 0;
+  accent-color: #29715c; border: none; background: transparent; box-shadow: none; cursor: pointer;
+}
+.actions small { color: #547063; font-size: .82rem; }
+.lesson { min-width:0; padding: .35rem 1rem .7rem; border-inline-start: 3px solid #87ad97; background: #f1f6f0; }
+.lesson h4 { font-size: 1rem; margin: .7rem 0 .25rem; }
+.lesson :global(.math-formula) { color: #254d3f; }
+.circleLayout { display: grid; grid-template-columns: minmax(0,1.16fr) minmax(0,1fr); gap: 1.1rem; align-items: start; }
+.circle { touch-action: none; cursor: crosshair; }
+.circleFigure { min-width:0; margin:0; }
+.angleStrip,.pointStrip { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-around; gap:.15rem .6rem; padding:.35rem .2rem; }
+.pointStrip { border-top:1px solid #d4e0d8; font-size:.95rem; }
+.pointStrip>span { display:inline-flex; align-items:center; gap:.35em; }
+.pointStrip i { width:8px; height:8px; border-radius:50%; background:#187762; }
+.pointStrip span+span>i { background:#b56033; }
+.rule { padding:.3rem 0; }
+.identities { display:grid; justify-items:center; gap:.35rem; padding:.8rem .15rem; text-align:center; color:#1e513e; font-size:clamp(1.12rem,2.2vw,1.5rem); }
+.identities :global(.math-display) { display:block; width:100%; max-width:100%; text-align:center; }
+.identities :global(.katex-display) { text-align:center; margin:0; }
+.lab .identities :global(.katex-display > .katex) { text-align:center; }
+.deck { display:grid; gap:.8rem; border-top:1px solid #d3dfd5; padding-top:1rem; margin-top:1rem; }
+.deck .controls { margin:0; }
+.deck fieldset { min-width:0; border:0; padding:0; margin:0; }
+.deck legend { padding:0; margin:0 0 .3rem; font-weight:650; color:#284e41; font-size:.87rem; }
+.deck .selector button { padding:.35rem .65rem; }
+.deck .options { display:flex; flex-wrap:wrap; gap:.3rem 1rem; }
+.deck .options label { display:inline-flex; align-items:center; gap:.35rem; }
+.lab .options input[type=checkbox] { width:1rem; height:1rem; padding:0; margin:0; accent-color:#276653; }
+.hint { margin:0; font-size:.88rem; color:#526c5d; }
+@media (max-width: 680px) {
+  .periodicLayout, .circleLayout { grid-template-columns: minmax(0,1fr); }
+  .views figure>svg { max-width: 420px; margin: auto; }
+  .circle { max-width: 330px; margin: auto; }
+}
+@media (max-width: 430px) {
+  .controls { grid-template-columns: minmax(0,1fr); gap: .3rem; }
+  .selector { gap: .3rem; }
+  .selector button { padding: .4rem .55rem; }
+  .lesson { padding-inline: .65rem; }
+}
+
+.circle .angleStrip,.circle .pointStrip{flex-wrap:nowrap;align-items:center;justify-content:space-evenly;padding:0;height:100%;font-size:11px}.circle .pointStrip :global(.math-formula),.circle .angleStrip :global(.math-formula){padding:0}.circle .pointStrip i{width:5px;height:5px;flex:none}

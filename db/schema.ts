@@ -1,0 +1,6 @@
+import { sqliteTable, text, integer, uniqueIndex } from "drizzle-orm/sqlite-core";
+export const profiles = sqliteTable("profiles", { userId:text("user_id").primaryKey(),name:text("name").notNull(),grade:text("grade").notNull().default("高一"),updatedAt:text("updated_at").notNull() });
+export const attempts=sqliteTable("attempts",{id:text("id").primaryKey(),userId:text("user_id").notNull(),topicId:text("topic_id").notNull(),score:integer("score").notNull(),total:integer("total").notNull(),results:text("results").notNull(),createdAt:text("created_at").notNull()});
+export const enrollments=sqliteTable("enrollments",{id:text("id").primaryKey(),userId:text("user_id").notNull(),courseId:text("course_id").notNull(),name:text("name").notNull(),contact:text("contact").notNull(),remark:text("remark").notNull().default(""),status:text("status").notNull().default("pending"),createdAt:text("created_at").notNull()},t=>[uniqueIndex("enrollment_user_course").on(t.userId,t.courseId)]);
+export const courseOverrides=sqliteTable("course_overrides",{id:text("id").primaryKey(),data:text("data").notNull(),updatedAt:text("updated_at").notNull()});
+export const resourceOverrides=sqliteTable("resource_overrides",{id:text("id").primaryKey(),data:text("data").notNull(),updatedAt:text("updated_at").notNull()});

@@ -1,0 +1,45 @@
+.vec-lab { color:#233d35; background:white; border:1px solid #c1d2c7; border-radius:16px; overflow:hidden; max-width:920px; width:100%; min-width:0; }
+.vec-lab > header, .vec-body { padding:clamp(14px,3vw,26px); }
+.vec-lab > header { background:#fbfcf8; }
+.vec-lab h2, .vec-lab h3 { margin:0 0 8px; line-height:1.4; font-size:clamp(18px,2.5vw,23px); color:#223f34; }
+.vec-lab h3 { font-size:17px; }
+.vec-lab p, .vec-lab li { color:#415b50; line-height:1.8; font-size:15px; }
+.vec-lab p { margin:8px 0; }
+.vec-lab ol { padding-inline-start:22px; list-style:decimal; }
+.vec-lab li+li { margin-top:7px; }
+.vec-graph { display:block; width:100%; height:auto; max-height:385px; background:#f6f9f6; border-block:1px solid #cddbd2; }
+.vec-study { display:grid; grid-template-columns:minmax(0,1.15fr) minmax(0,1fr); align-items:start; border-bottom:1px solid #d2e0d5; }
+.vec-study figure { min-width:0; margin:0; }
+.vec-study figcaption, .vec-legend { display:flex; flex-wrap:wrap; gap:6px 16px; padding:12px 16px; color:#435d50; font-size:13px; }
+.vec-key { display:inline-flex; align-items:center; gap:4px; }
+.vec-key i { width:14px; display:inline-block; border-top:2px solid; }
+.vec-steps { min-width:0; padding:14px 22px; }
+.vec-steps ol { margin:6px 0; }
+.vec-sliders, .vec-readings { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:clamp(10px,2.5vw,24px); }
+.vec-slider { display:block; min-width:0; color:#435d50; font-size:14px; }
+.vec-slider-head { display:flex; justify-content:space-between; align-items:center; gap:4px; }
+.vec-slider b { color:#185f4a; font-variant-numeric:tabular-nums; }
+.vec-slider input[type=range] { display:block; width:100%; margin:4px 0; padding:0; height:26px; cursor:pointer; accent-color:#20765d; }
+.vec-actions, .vec-tabs { display:flex; flex-wrap:wrap; gap:7px; }
+.vec-actions { margin:12px 0 0; }
+.vec-tabs { padding:0 clamp(14px,3vw,26px) 14px; background:#fbfcf8; }
+.vec-extra-mode { display:inline-flex; align-items:center; flex-wrap:wrap; gap:6px; font-size:14px; color:#355b47; }
+.vec-extra-mode select { width:auto; max-width:100%; padding:6px 8px; border:1px solid #c4d7ca; border-radius:7px; background:white; color:inherit; font:inherit; }
+.vec-lab button { padding:7px 12px; background:#f4f8f4; color:#245340; border:1px solid #c4d7ca; border-radius:7px; cursor:pointer; font-size:14px; }
+.vec-lab button:hover { background:#e7f1e7; }
+.vec-lab button[aria-pressed=true] { background:#204b39; color:white; }
+.vec-lab :where(button,input):focus-visible { outline:2px solid #15745b; outline-offset:2px; }
+.vec-readings { margin:18px 0 22px; padding-block:14px; border-block:1px solid #d3dfd7; }
+.vec-readings dt { font-size:13px; color:#526d61; }
+.vec-readings dd { margin:4px 0 0; font-size:clamp(16px,2vw,20px); font-weight:600; font-variant-numeric:tabular-nums; }
+.vec-lab .math-display { max-width:100%; overflow-x:auto; overflow-y:hidden; }
+.vec-point-name { display:grid; place-items:center; width:24px; height:24px; color:#284336; font-size:14px; line-height:1; }
+.vec-point-name .math-formula.math-inline { display:inline-block; padding:0; overflow:visible; line-height:1; }
+@media (max-width:590px) {
+  .vec-study { grid-template-columns:minmax(0,1fr); }
+  .vec-steps { padding:14px; }
+  .vec-sliders { grid-template-columns:1fr; gap:4px; }
+  .vec-readings { grid-template-columns:1fr; gap:6px; }
+  .vec-readings>div { display:flex; align-items:baseline; justify-content:space-between; gap:8px; }
+  .vec-readings dd { margin:0; }
+}

@@ -1,0 +1,104 @@
+.tangent-lab {
+  color: #243b38;
+  background: #fcfdfb;
+  border: 1px solid #bfd0c7;
+  border-radius: 16px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 900px;
+  min-width: 0;
+  text-align: left;
+  box-shadow: 0 10px 40px -28px #123f30;
+}
+.tangent-lab__head, .tangent-lab__readout, .tangent-lab__actions, .tangent-lab__step-nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.tangent-lab__head {
+  padding: 12px 20px;
+  justify-content: space-between;
+  border-bottom: 1px solid #cedbd2;
+}
+.tangent-lab__title {
+  color: #254238;
+  font-weight: 650;
+  font-size: 15px;
+  letter-spacing: .04em;
+}
+.tangent-lab button {
+  color: #24483c;
+  background: #f5f8f4;
+  border: 1px solid #c8d9ce;
+  border-radius: 7px;
+  cursor: pointer;
+  font: inherit;
+}
+.tangent-lab button:hover { background: #e9f1e9; }
+.tangent-lab button:focus-visible, .tangent-lab input:focus-visible {
+  outline: 2px solid #19765d;
+  outline-offset: 2px;
+}
+.tangent-lab .tangent-lab__expand {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 32px;
+  border: 0;
+  background: transparent;
+}
+.tangent-lab__plot {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 54vh;
+  background: #f4f8f5;
+  user-select: none;
+}
+.tangent-lab__legend{display:flex;flex-wrap:wrap;gap:5px 18px;color:#355545;font-size:13px;margin-bottom:6px}
+.tangent-lab__handle { cursor: grab; touch-action: none; }
+.tangent-lab__handle:active { cursor: grabbing; }
+.tangent-lab__controls {
+  border-top: 1px solid #cedbd2;
+  padding: 16px 20px;
+}
+.tangent-lab__readout {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #486054;
+}
+.tangent-lab__readout label, .tangent-lab__readout > span {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+}
+.tangent-lab__readout .math-formula { font-size: 16px; color: #183d33; }
+.tangent-lab__controls input[type=range] {
+  display: block;
+  width: 100%;
+  margin: 8px 0 0;
+  padding: 0;
+  height: 24px;
+  accent-color: #20755b;
+  cursor: pointer;
+}
+.tangent-lab__actions, .tangent-lab__step-nav { flex-wrap: wrap; }
+.tangent-lab__actions { margin-top: 10px; gap: 8px; }
+.tangent-lab__actions > span { margin-left: auto; font-size: 13px; }
+.tangent-lab__actions button, .tangent-lab__step-nav button {
+  padding: 7px 12px;
+  font-size: 13px;
+  line-height: 1.4;
+}
+.tangent-lab__steps { padding: 18px 20px; border-top: 1px solid #d4e0d7; }
+.tangent-lab__steps p { font-size: 14px; line-height: 1.8; margin: 14px 0 6px; }
+.tangent-lab__steps .math-display { overflow-x: auto; }
+.tangent-lab__step-nav { gap: 5px; }
+.tangent-lab__step-nav button[aria-pressed=true] { color: white; background: #254c3c; }
+.tangent-lab--expanded { position: fixed; inset: 0; z-index: 1000; max-width: none; border-radius: 0; overflow-y: auto; overscroll-behavior: contain; }
+.tangent-lab--expanded .tangent-lab__controls, .tangent-lab--expanded .tangent-lab__steps { max-width: 900px; margin-inline: auto; }
+@media (max-width: 500px) {
+  .tangent-lab__head, .tangent-lab__steps, .tangent-lab__controls { padding: 12px 14px; }
+  .tangent-lab__actions > span { width: 100%; margin: 3px 0 0; }
+}
